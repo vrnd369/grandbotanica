@@ -1,0 +1,573 @@
+.our-commitment {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fa;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.commitment-hero {
+  background: transparent;
+  padding: 5rem 2rem 1.5rem;
+  text-align: left;
+  color: #2d5016;
+  position: relative;
+  border-bottom: 2px solid rgba(74, 124, 42, 0.1);
+  margin-bottom: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+  font-weight: 700;
+  color: #2d5016;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+  animation: fadeInDown 0.8s ease-out;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  line-height: 1.2;
+}
+
+.title-line-1,
+.title-line-2 {
+  display: block;
+  position: relative;
+}
+
+.title-line-1 {
+  animation: fadeInDown 0.8s ease-out 0.1s both;
+}
+
+.title-line-2 {
+  animation: fadeInDown 0.8s ease-out 0.3s both;
+  font-weight: 600;
+  opacity: 0.9;
+  position: relative;
+}
+
+.title-line-2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: #2d5016;
+  border-radius: 2px;
+  opacity: 0.2;
+  animation: expandLine 1s ease-out 0.8s both;
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 120px;
+    opacity: 0.2;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.commitment-content {
+  padding: 0.5rem 2rem 5rem;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+/* Intro Section */
+.intro-section {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.intro-section::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: #2d5016;
+  border-radius: 2px;
+  opacity: 0.2;
+}
+
+.intro-text {
+  font-size: 1.4rem;
+  line-height: 2.1;
+  color: #2d5016;
+  margin: 0;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  position: relative;
+  padding: 3rem 2.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.intro-text:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Process Steps */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.process-card {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  border-left: 5px solid transparent;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.process-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #2d5016;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.3;
+}
+
+.process-card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  border-left-color: #2d5016;
+}
+
+.process-card:hover::before {
+  transform: scaleY(1);
+  opacity: 0.5;
+}
+
+.process-number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #2d5016;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(45, 80, 22, 0.05);
+  border-radius: 50%;
+  border: 2px solid rgba(45, 80, 22, 0.15);
+  transition: all 0.4s ease;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.process-card:hover .process-number {
+  background: #2d5016;
+  color: white;
+  border-color: #2d5016;
+  transform: scale(1.05);
+}
+
+.process-content {
+  flex: 1;
+}
+
+.process-title {
+  font-size: 2rem;
+  color: #2d5016;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.process-description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+  letter-spacing: 0.2px;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+/* Quality List */
+.quality-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+}
+
+.quality-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background: rgba(45, 80, 22, 0.03);
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.quality-item:hover {
+  background: rgba(45, 80, 22, 0.06);
+  transform: translateX(5px);
+  border-left-color: #2d5016;
+}
+
+.quality-bullet {
+  font-size: 1.5rem;
+  color: #2d5016;
+  font-weight: 700;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  opacity: 0.6;
+}
+
+.quality-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  flex: 1;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+/* Closing Statement */
+.closing-statement {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 3rem;
+  background: rgba(45, 80, 22, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.closing-statement:hover {
+  background: rgba(45, 80, 22, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.closing-text {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #2d5016;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 1;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .page-title {
+    font-size: 3rem;
+    letter-spacing: -0.4px;
+    gap: 0.25rem;
+  }
+
+  .title-line-2::after {
+    width: 100px;
+  }
+
+  .process-card {
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+
+  .process-number {
+    width: 70px;
+    height: 70px;
+    font-size: 3.5rem;
+  }
+
+  .process-title {
+    font-size: 1.8rem;
+  }
+
+  .process-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .commitment-hero {
+    padding: 4rem 1.5rem 1rem;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+    margin-top: 0.5rem;
+    letter-spacing: -0.4px;
+    gap: 0.2rem;
+  }
+
+  .title-line-2::after {
+    width: 80px;
+  }
+
+  .commitment-content {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .intro-text {
+    font-size: 1.2rem;
+    padding: 2.5rem 2rem;
+    line-height: 1.9;
+  }
+
+  .process-steps {
+    gap: 2rem;
+  }
+
+  .process-card {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .process-number {
+    width: 60px;
+    height: 60px;
+    font-size: 3rem;
+  }
+
+  .process-title {
+    font-size: 1.6rem;
+  }
+
+  .process-description {
+    font-size: 1.05rem;
+  }
+
+  .quality-item {
+    padding: 0.7rem;
+  }
+
+  .quality-text {
+    font-size: 1rem;
+  }
+
+  .closing-statement {
+    padding: 2.5rem 2rem;
+  }
+
+  .closing-text {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .commitment-hero {
+    padding: 3.5rem 1rem 0.8rem;
+  }
+
+  .page-title {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    letter-spacing: -0.3px;
+    gap: 0.15rem;
+  }
+
+  .title-line-2::after {
+    width: 60px;
+    height: 2px;
+  }
+
+  .commitment-content {
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  .intro-section {
+    margin-bottom: 3rem;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    padding: 2rem 1.5rem;
+    line-height: 1.85;
+  }
+
+  .process-steps {
+    gap: 1.5rem;
+  }
+
+  .process-card {
+    padding: 1.5rem;
+  }
+
+  .process-number {
+    width: 50px;
+    height: 50px;
+    font-size: 2.5rem;
+  }
+
+  .process-title {
+    font-size: 1.4rem;
+  }
+
+  .process-description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .quality-item {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.8rem;
+  }
+
+  .quality-bullet {
+    font-size: 1.2rem;
+  }
+
+  .quality-text {
+    font-size: 0.95rem;
+  }
+
+  .closing-statement {
+    padding: 2rem 1.5rem;
+  }
+
+  .closing-text {
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .page-title {
+    font-size: 1.2rem;
+    letter-spacing: -0.2px;
+    gap: 0.1rem;
+  }
+
+  .title-line-2::after {
+    width: 50px;
+    height: 2px;
+  }
+
+  .commitment-hero {
+    padding: 5.5rem 0.8rem 2rem;
+  }
+}
+
+/* AOS Animation Enhancements */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(30px);
+}
+
+[data-aos="fade-up"].aos-animate {
+  transform: translateY(0);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-30px);
+}
+
+[data-aos="fade-right"].aos-animate {
+  transform: translateX(0);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(30px);
+}
+
+[data-aos="fade-left"].aos-animate {
+  transform: translateX(0);
+}
+
+/* AOS Animation Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  [data-aos] {
+    transition-duration: 0.5s !important;
+  }
+  
+  [data-aos-delay] {
+    transition-delay: 0s !important;
+  }
+
+  [data-aos="fade-up"] {
+    transform: translateY(20px);
+  }
+
+  [data-aos="fade-right"],
+  [data-aos="fade-left"] {
+    transform: translateY(20px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.be1156e9.css",
+    "main.js": "/static/js/main.6d9c2759.js",
+    "static/js/453.d294b8a1.chunk.js": "/static/js/453.d294b8a1.chunk.js",
+    "static/media/green coffee.jpg": "/static/media/green coffee.05328c19a81fe2373f62.jpg",
+    "static/media/bacopa.jpg": "/static/media/bacopa.fde4cbba7528cc171c08.jpg",
+    "static/media/aloevera.jpg": "/static/media/aloevera.c5d3c8163e31770aeac7.jpg",
+    "static/media/boswellia.png": "/static/media/boswellia.2852f2824d55b72da35c.png",
+    "static/media/green.png": "/static/media/green.ac9ba7b926c03f387192.png",
+    "static/media/Phyllanthus.png": "/static/media/Phyllanthus.5284c9ae3eea8a031adf.png",
+    "static/media/bac.png": "/static/media/bac.ef69e5e7967bfa0efe2b.png",
+    "static/media/aloevera.png": "/static/media/aloevera.b463e3a32009bf0261e7.png",
+    "static/media/Tribulus.png": "/static/media/Tribulus.6908bd207e4711eb0277.png",
+    "static/media/Andro.png": "/static/media/Andro.e51c1be00ce6d7884fb4.png",
+    "static/media/gland.png": "/static/media/gland.6dff897ef6de9ec77e20.png",
+    "static/media/Fenugreek.png": "/static/media/Fenugreek.049cd489f60f1ce6cb08.png",
+    "index.html": "/index.html",
+    "main.be1156e9.css.map": "/static/css/main.be1156e9.css.map",
+    "main.6d9c2759.js.map": "/static/js/main.6d9c2759.js.map",
+    "453.d294b8a1.chunk.js.map": "/static/js/453.d294b8a1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be1156e9.css",
+    "static/js/main.6d9c2759.js"
+  ]
+}
