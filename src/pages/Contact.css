@@ -1,0 +1,677 @@
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 20%, #f9fbe7 40%, #fff9e6 60%, #f0f7f4 80%, #e8f5e9 100%);
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.contact::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse 800px 600px at 10% 15%, rgba(74, 124, 42, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 700px 500px at 90% 25%, rgba(107, 168, 58, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 1000px 800px at 50% 60%, rgba(255, 140, 66, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 600px 400px at 25% 85%, rgba(74, 124, 42, 0.07) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 0;
+  animation: contactBackgroundFloat 20s ease-in-out infinite;
+  filter: blur(60px);
+}
+
+.contact::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(74, 124, 42, 0.015) 50px, rgba(74, 124, 42, 0.015) 51px),
+    repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(107, 168, 58, 0.012) 50px, rgba(107, 168, 58, 0.012) 51px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+  animation: contactPatternFade 15s ease-in-out infinite;
+}
+
+@keyframes contactBackgroundFloat {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes contactPatternFade {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.contact-hero {
+  background: transparent;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  color: #2d5016;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(74, 124, 42, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: contactHeroPulse 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+.contact-hero::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(107, 168, 58, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: contactHeroFloat 8s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes contactHeroPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.4);
+    opacity: 0.3;
+  }
+}
+
+@keyframes contactHeroFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(20px, -30px) scale(1.2);
+    opacity: 0.3;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+  margin-top: -2rem;
+  font-weight: 700;
+  color: #2d5016;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.contact-content {
+  padding: 2rem 2rem 5rem;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form-wrapper {
+  margin-left: -2rem;
+  position: relative;
+}
+
+.contact-info {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  color: #2d5016;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  position: relative;
+}
+
+.contact-info h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #4a7c2a 0%, #6ba83a 50%, #ff8c42 100%);
+  border-radius: 2px;
+  animation: contactTitleLine 2s ease-in-out infinite;
+}
+
+@keyframes contactTitleLine {
+  0%, 100% {
+    width: 60px;
+    opacity: 1;
+  }
+  50% {
+    width: 100px;
+    opacity: 0.8;
+  }
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.65) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 16px;
+  border: 1px solid rgba(45, 80, 22, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(74, 124, 42, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(74, 124, 42, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.contact-item:hover::before {
+  opacity: 1;
+}
+
+.contact-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-item:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%);
+  transform: translateY(-5px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(74, 124, 42, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border-color: rgba(74, 124, 42, 0.25);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  background: rgba(45, 80, 22, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+  background: rgba(45, 80, 22, 0.15);
+  transform: scale(1.1);
+}
+
+.contact-item h4 {
+  font-size: 1.2rem;
+  color: #2d5016;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.contact-link {
+  display: block;
+  color: #4a7c2a;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.8;
+  transition: all 0.3s ease;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.contact-link:hover {
+  color: #2d5016;
+  text-decoration: underline;
+  transform: translateX(5px);
+}
+
+.contact-text {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.map-link {
+  font-weight: 600;
+}
+
+
+.contact-form-wrapper {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(248, 255, 248, 0.75) 100%);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  padding: 3rem;
+  border-radius: 24px;
+  border: 1px solid rgba(45, 80, 22, 0.15);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(74, 124, 42, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(74, 124, 42, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4a7c2a 0%, #6ba83a 30%, #ff8c42 60%, #6ba83a 100%);
+  border-radius: 24px 24px 0 0;
+  z-index: 0;
+}
+
+.contact-form-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  right: -50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(74, 124, 42, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.contact-form-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  color: #2d5016;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #2d5016;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(45, 80, 22, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a7c2a;
+  box-shadow: 0 0 0 3px rgba(74, 124, 42, 0.1);
+  background: white;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #4a7c2a 0%, #6ba83a 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 124, 42, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(74, 124, 42, 0.6);
+}
+
+/* AOS Animation Enhancements */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(40px);
+}
+
+[data-aos="fade-up"].aos-animate {
+  transform: translateY(0);
+}
+
+[data-aos="fade-down"] {
+  transform: translateY(-40px);
+}
+
+[data-aos="fade-down"].aos-animate {
+  transform: translateY(0);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-50px);
+}
+
+[data-aos="fade-right"].aos-animate {
+  transform: translateX(0);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(50px);
+}
+
+[data-aos="fade-left"].aos-animate {
+  transform: translateX(0);
+}
+
+[data-aos="zoom-in"] {
+  transform: scale(0.8);
+}
+
+[data-aos="zoom-in"].aos-animate {
+  transform: scale(1);
+}
+
+/* Staggered animation for contact items */
+.contact-item[data-aos] {
+  transition-delay: calc(var(--aos-delay, 0) * 1ms);
+}
+
+/* Smooth icon animations */
+.contact-icon[data-aos] {
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.contact-icon[data-aos="zoom-in"].aos-animate {
+  animation: iconPulse 0.6s ease-out;
+}
+
+@keyframes iconPulse {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .contact-wrapper {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+  }
+
+  .contact-form-wrapper {
+    margin-left: -1.5rem;
+    padding: 2.5rem;
+  }
+
+  .contact-info h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 50%, #f9fbe7 100%);
+  }
+
+  .contact::before {
+    filter: blur(40px);
+    background: 
+      radial-gradient(ellipse 600px 400px at 10% 15%, rgba(74, 124, 42, 0.06) 0%, transparent 45%),
+      radial-gradient(ellipse 500px 350px at 90% 25%, rgba(107, 168, 58, 0.05) 0%, transparent 45%);
+  }
+
+  .contact::after {
+    background-image: 
+      repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(74, 124, 42, 0.01) 30px, rgba(74, 124, 42, 0.01) 31px);
+    opacity: 0.3;
+  }
+
+  .contact-hero {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .contact-hero::before {
+    width: 350px;
+    height: 350px;
+  }
+
+  .contact-hero::after {
+    width: 200px;
+    height: 200px;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+    margin-top: -1.5rem;
+  }
+
+  .contact-content {
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-form-wrapper {
+    margin-left: 0;
+    padding: 2rem;
+  }
+
+  .contact-info h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-item {
+    padding: 1.2rem;
+  }
+
+  [data-aos] {
+    transition-duration: 0.5s !important;
+  }
+
+  [data-aos-delay] {
+    transition-delay: 0s !important;
+  }
+
+  [data-aos="fade-up"] {
+    transform: translateY(20px);
+  }
+
+  [data-aos="fade-down"] {
+    transform: translateY(-20px);
+  }
+
+  [data-aos="fade-right"],
+  [data-aos="fade-left"] {
+    transform: translateY(20px);
+  }
+
+  [data-aos="zoom-in"] {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact {
+    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  }
+
+  .contact::before {
+    filter: blur(30px);
+    background: 
+      radial-gradient(ellipse 400px 300px at 10% 15%, rgba(74, 124, 42, 0.05) 0%, transparent 40%),
+      radial-gradient(ellipse 350px 250px at 90% 25%, rgba(107, 168, 58, 0.04) 0%, transparent 40%);
+  }
+
+  .contact::after {
+    background-image: 
+      repeating-linear-gradient(0deg, transparent, transparent 25px, rgba(74, 124, 42, 0.008) 25px, rgba(74, 124, 42, 0.008) 26px);
+    opacity: 0.25;
+  }
+
+  .contact-hero {
+    padding: 3.5rem 1rem 2.5rem;
+  }
+
+  .contact-hero::before {
+    width: 250px;
+    height: 250px;
+  }
+
+  .contact-hero::after {
+    width: 150px;
+    height: 150px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+    margin-top: -1rem;
+  }
+
+  .contact-content {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .contact-form-wrapper {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .contact-icon {
+    margin: 0 auto;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

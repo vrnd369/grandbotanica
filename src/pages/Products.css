@@ -1,0 +1,705 @@
+.products {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fa;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.products-hero {
+  background: transparent;
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  color: #2d5016;
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+  margin-top: -2rem;
+  font-weight: 700;
+  color: #2d5016;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+  animation: fadeInDown 0.8s ease-out;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.products-content {
+  padding: 1rem 2rem 4rem;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* Product Item Layout */
+.product-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  padding: 2.5rem;
+  min-height: 500px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Colored border line around product item - Drawing effect */
+.product-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px;
+  padding: 3px;
+  background: linear-gradient(
+    90deg,
+    #4a7c2a 0%,
+    #6ba83a 25%,
+    #ff8c42 50%,
+    #6ba83a 75%,
+    #4a7c2a 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+/* Drawing border from left for product-left */
+.product-left::before {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  animation: drawBorderFromLeft 3s ease-in-out infinite;
+}
+
+/* Drawing border from right for product-right */
+.product-right::before {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  animation: drawBorderFromRight 3s ease-in-out infinite;
+}
+
+@keyframes drawBorderFromLeft {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    opacity: 0.6;
+  }
+  12.5% {
+    clip-path: polygon(0 0, 25% 0, 0 100%, 0 100%);
+    opacity: 0.7;
+  }
+  25% {
+    clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+    opacity: 0.75;
+  }
+  37.5% {
+    clip-path: polygon(0 0, 100% 0, 100% 25%, 0 100%);
+    opacity: 0.8;
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 0.8;
+  }
+  62.5% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+    opacity: 0.8;
+  }
+  75% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+    opacity: 0.8;
+  }
+  87.5% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+    opacity: 0.8;
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+    opacity: 0.8;
+  }
+}
+
+@keyframes drawBorderFromRight {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    opacity: 0.6;
+  }
+  12.5% {
+    clip-path: polygon(100% 0, 75% 0, 100% 100%, 100% 100%);
+    opacity: 0.7;
+  }
+  25% {
+    clip-path: polygon(100% 0, 0 0, 100% 100%, 100% 100%);
+    opacity: 0.75;
+  }
+  37.5% {
+    clip-path: polygon(100% 0, 0 0, 0 75%, 100% 100%);
+    opacity: 0.8;
+  }
+  50% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    opacity: 0.8;
+  }
+  62.5% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 25%);
+    opacity: 0.8;
+  }
+  75% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 0 0);
+    opacity: 0.8;
+  }
+  87.5% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 0 0);
+    opacity: 0.8;
+  }
+  100% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 0 0);
+    opacity: 0.8;
+  }
+}
+
+.product-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.product-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Image Wrapper */
+.product-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.product-image-wrapper:hover::before {
+  left: 100%;
+}
+
+.product-image {
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  max-height: 500px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.product-image-wrapper:hover .product-image {
+  transform: scale(1.05);
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.2));
+}
+
+/* Product Content */
+.product-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 1rem 0;
+  position: relative;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.product-hover-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.product-content:hover .product-hover-content {
+  opacity: 1;
+  max-height: 2000px;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.product-line {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d5016;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.product-name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2d5016;
+  line-height: 1.3;
+  margin: 0;
+  letter-spacing: -0.3px;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+
+.product-description {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: #555;
+  margin: 0;
+  letter-spacing: 0.2px;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+
+.product-procedure {
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.product-procedure h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d5016;
+  margin-bottom: 1rem;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.product-procedure p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.product-benefits {
+  margin-top: 1rem;
+}
+
+.product-benefits h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d5016;
+  margin-bottom: 1.2rem;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+  transition: all 0.3s ease;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+.benefit-item:hover {
+  transform: translateX(5px);
+}
+
+.benefit-bullet {
+  font-size: 1.2rem;
+  color: #2d5016;
+  font-weight: 700;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  opacity: 0.6;
+}
+
+.benefit-item span:last-child {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  flex: 1;
+  font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+
+/* Alternating Layout */
+.product-left {
+  direction: ltr;
+}
+
+.product-right {
+  direction: rtl;
+}
+
+.product-right .product-content {
+  direction: ltr;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .product-item {
+    gap: 3rem;
+    margin-bottom: 4rem;
+    min-height: 450px;
+    padding: 2rem;
+  }
+
+  .product-item::before {
+    padding: 2.5px;
+    border-radius: 22px;
+    background-size: 350% 100%;
+  }
+
+  .product-image-wrapper {
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    padding: 1.3rem;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    object-fit: contain;
+  }
+
+  .product-name {
+    font-size: 2.4rem;
+  }
+
+  .product-description {
+    font-size: 1.2rem;
+  }
+
+  .product-name {
+    font-size: 2.2rem;
+  }
+
+  .product-description {
+    font-size: 1.1rem;
+  }
+
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .products-hero {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+    margin-top: -1.5rem;
+  }
+
+  .products-content {
+    padding: 2rem 1.5rem 3rem;
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .product-item {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+    min-height: auto;
+    padding: 2rem;
+  }
+
+  .product-item::before {
+    padding: 2.5px;
+    border-radius: 20px;
+    background-size: 350% 100%;
+  }
+
+  .product-left,
+  .product-right {
+    direction: ltr;
+  }
+
+  .product-image-wrapper {
+    min-height: 400px;
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    padding: 1.2rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    object-fit: contain;
+  }
+
+
+  .product-content {
+    order: 2;
+    padding: 0;
+  }
+
+  .product-name {
+    font-size: 2rem;
+  }
+
+  .product-description {
+    font-size: 1.05rem;
+  }
+
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .products-hero {
+    padding: 3.5rem 1rem 2.5rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+    margin-top: -1rem;
+  }
+
+  .products-content {
+    padding: 1.5rem 1rem 2.5rem;
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .product-item {
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+  }
+
+  .product-item::before {
+    padding: 2px;
+    border-radius: 18px;
+    opacity: 0.7;
+    background-size: 300% 100%;
+  }
+
+  .product-image-wrapper {
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    padding: 1rem;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    object-fit: contain;
+  }
+
+
+  .product-name {
+    font-size: 1.6rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .product-line {
+    font-size: 0.95rem;
+  }
+
+  .product-procedure {
+    padding: 1.2rem;
+  }
+
+  .product-procedure h3,
+  .product-benefits h3 {
+    font-size: 1.1rem;
+  }
+
+  .benefit-item {
+    padding: 0.7rem;
+  }
+
+  .benefit-item span:last-child {
+    font-size: 0.95rem;
+  }
+}
+
+/* AOS Animation Enhancements */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(30px);
+}
+
+[data-aos="fade-up"].aos-animate {
+  transform: translateY(0);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-50px);
+}
+
+[data-aos="fade-right"].aos-animate {
+  transform: translateX(0);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(50px);
+}
+
+[data-aos="fade-left"].aos-animate {
+  transform: translateX(0);
+}
+
+/* AOS Animation Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  [data-aos] {
+    transition-duration: 0.5s !important;
+  }
+  
+  [data-aos-delay] {
+    transition-delay: 0s !important;
+  }
+
+  [data-aos="fade-up"] {
+    transform: translateY(20px);
+  }
+
+  [data-aos="fade-right"],
+  [data-aos="fade-left"] {
+    transform: translateY(20px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
