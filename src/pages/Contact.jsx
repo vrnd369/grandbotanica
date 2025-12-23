@@ -48,7 +48,7 @@ const Contact = () => {
                   <div className="contact-icon" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="250">📧</div>
                   <div>
                     <h4>Email</h4>
-                    <a href="mailto:hr@glandbotanica.com" className="contact-link">hr@glandbotanica.com</a>
+                    <a href="mailto:hr@glandbotanica.com" className="contact-link">psr@glandbotanica.com</a>
                     <a href="mailto:info@glandbotanica.com" className="contact-link">info@glandbotanica.com</a>
                   </div>
                 </div>
@@ -57,7 +57,7 @@ const Contact = () => {
                   <div className="contact-icon" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">📞</div>
                   <div>
                     <h4>Phone Numbers</h4>
-                    <p className="contact-text">Available on request</p>
+                    <p className="contact-text">5346729197</p>
                   </div>
                 </div>
 
