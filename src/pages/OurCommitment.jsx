@@ -65,7 +65,7 @@ const OurCommitment = () => {
               <div className="process-content">
                 <h2 className="process-title">Quality Control & Testing</h2>
                 <p className="process-description">
-                  Each extract undergoes third-party testing for:
+                  Each extract undergoes testing for:
                 </p>
                 <ul className="quality-list">
                   {qualityTests.map((test, index) => (

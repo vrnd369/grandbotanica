@@ -382,9 +382,9 @@
 .form-group textarea {
   width: 100%;
   padding: 1rem;
-  border: 2px solid rgba(45, 80, 22, 0.2);
+  border: 2px solid #000000;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: 'Aptos', 'Aptos Display', 'Segoe UI Variable', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
   transition: all 0.3s ease;
   box-sizing: border-box;
@@ -394,8 +394,8 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #4a7c2a;
-  box-shadow: 0 0 0 3px rgba(74, 124, 42, 0.1);
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
   background: white;
 }
 

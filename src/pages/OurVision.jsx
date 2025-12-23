@@ -24,7 +24,7 @@ const OurVision = () => {
           {/* Intro Section */}
           <div className="intro-section" data-aos="fade-up" data-aos-duration="800">
             <p className="intro-text">
-              Your health depends on the quality of our ingredients. We ensure maximum potency, purity, and safety through a rigorous, transparent manufacturing process.
+              Your health depends on the quality of ingredients. We ensure maximum potency, purity, and safety through a rigorous, transparent manufacturing process.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ const OurVision = () => {
               <div className="process-content">
                 <h2 className="process-title">Quality Control & Testing</h2>
                 <p className="process-description">
-                  Each extract undergoes third-party testing for:
+                  Each extract undergoes testing for:
                 </p>
                 <ul className="quality-list">
                   {qualityTests.map((test, index) => (
