@@ -46,7 +46,7 @@ const About = () => {
               <div className="intro-text-main">
                 <p className="intro-paragraph" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                   <span className="highlight-text">Gland Botanica</span> is a <span className="accent-text">Research driven</span> and <span className="accent-text">Quality focused</span> plant extracts manufacturer with a focus on improving human health by <span className="accent-text">Catering to the needs</span> of the health care industries. We are proud to be producing the <span className="highlight-text">highest Quality and purity</span> extracts.
-                </p>
+            </p>
                 <p className="intro-paragraph" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                   <span className="highlight-text">Gland Botanica</span> is one of India's largest manufacturers of herbal and Ayurvedic nutraceutical extracts. Our state-of-the-art manufacturing facility is designed to meet USFDA standards, ensuring premium quality and safety.
                 </p>
@@ -113,7 +113,7 @@ const About = () => {
               <div className="location-content">
                 <div className="location-title-wrapper">
                   <span className="location-icon-mobile">📍</span>
-                  <h3 className="location-title">Our Location</h3>
+                <h3 className="location-title">Our Location</h3>
                 </div>
                 <p className="location-text">
                   We are located on an 8-acre campus in Genome Valley, Turkapally, the hub of India's biotech innovation.

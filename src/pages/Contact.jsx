@@ -44,20 +44,20 @@ const Contact = () => {
               <h2 data-aos="fade-right" data-aos-duration="800" data-aos-delay="100" data-aos-easing="ease-out-cubic">Get in Touch</h2>
               
               <div className="contact-details">
-                <div className="contact-item" data-aos="fade-right" data-aos-duration="700" data-aos-delay="200" data-aos-easing="ease-out-cubic">
+                <div className="contact-item email-item" data-aos="fade-right" data-aos-duration="700" data-aos-delay="200" data-aos-easing="ease-out-cubic">
                   <div className="contact-icon" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="250">📧</div>
                   <div>
                     <h4>Email</h4>
-                    <a href="mailto:hr@glandbotanica.com" className="contact-link">hr@glandbotanica.com</a>
+                    <a href="mailto:hr@glandbotanica.com" className="contact-link">psr@glandbotanica.com</a>
                     <a href="mailto:info@glandbotanica.com" className="contact-link">info@glandbotanica.com</a>
                   </div>
                 </div>
 
-                <div className="contact-item" data-aos="fade-right" data-aos-duration="700" data-aos-delay="300" data-aos-easing="ease-out-cubic">
+                <div className="contact-item phone-numbers-item" data-aos="fade-right" data-aos-duration="700" data-aos-delay="300" data-aos-easing="ease-out-cubic">
                   <div className="contact-icon" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">📞</div>
                   <div>
                     <h4>Phone Numbers</h4>
-                    <p className="contact-text">Available on request</p>
+                    <p className="contact-text">5346729197</p>
                   </div>
                 </div>
 

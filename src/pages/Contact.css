@@ -583,11 +583,15 @@
     padding: 1.2rem;
   }
 
+  .contact-item.email-item,
+  .contact-item.phone-numbers-item,
   .contact-item.map-location-item {
     text-align: left;
     align-items: flex-start;
   }
 
+  .contact-item.email-item .contact-icon,
+  .contact-item.phone-numbers-item .contact-icon,
   .contact-item.map-location-item .contact-icon {
     margin: 0;
     align-self: flex-start;
@@ -671,11 +675,15 @@
     padding: 1rem;
   }
 
+  .contact-item.email-item,
+  .contact-item.phone-numbers-item,
   .contact-item.map-location-item {
     text-align: left;
     align-items: flex-start;
   }
 
+  .contact-item.email-item .contact-icon,
+  .contact-item.phone-numbers-item .contact-icon,
   .contact-item.map-location-item .contact-icon {
     margin: 0;
     align-self: flex-start;
