@@ -583,6 +583,16 @@
     padding: 1.2rem;
   }
 
+  .contact-item.map-location-item {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .contact-item.map-location-item .contact-icon {
+    margin: 0;
+    align-self: flex-start;
+  }
+
   [data-aos] {
     transition-duration: 0.5s !important;
   }
@@ -659,6 +669,16 @@
     flex-direction: column;
     text-align: center;
     padding: 1rem;
+  }
+
+  .contact-item.map-location-item {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .contact-item.map-location-item .contact-icon {
+    margin: 0;
+    align-self: flex-start;
   }
 
   .contact-icon {

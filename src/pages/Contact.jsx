@@ -61,7 +61,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="contact-item" data-aos="fade-right" data-aos-duration="700" data-aos-delay="400" data-aos-easing="ease-out-cubic">
+                <div className="contact-item map-location-item" data-aos="fade-right" data-aos-duration="700" data-aos-delay="400" data-aos-easing="ease-out-cubic">
                   <div className="contact-icon" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="450">📍</div>
                   <div>
                     <h4>Map Location</h4>
