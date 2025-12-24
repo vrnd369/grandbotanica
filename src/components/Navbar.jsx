@@ -26,7 +26,7 @@ const Navbar = () => {
 
   const regularLinks = [
     { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
+    { path: '/about', label: 'About Us' },
     { path: '/our-vision', label: 'Our Commitment to Purity' },
     { path: '/products', label: 'Products' }
   ];

@@ -69,11 +69,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-logo-text {
   text-align: center;
+  width: 100%;
+}
+
+.footer-logo-image {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 6px 20px rgba(45, 80, 22, 0.25));
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-logo-image:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 10px 28px rgba(45, 80, 22, 0.35));
 }
 
 .footer-logo {
@@ -85,6 +105,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1;
+  display: none;
 }
 
 .footer-company {
@@ -166,16 +187,17 @@
     font-size: 1.3rem;
   }
 
-  .footer-logo {
-    font-size: 3rem;
-  }
-
-  .footer-company {
-    font-size: 1.3rem;
-  }
-
   .footer-brand {
-    margin-top: 1.5rem;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .footer-logo-image {
+    max-width: 180px;
+  }
+
+  .footer-logo-image:hover {
+    transform: scale(1.08);
   }
 
   .footer-bottom {
@@ -222,12 +244,17 @@
     font-size: 0.95rem;
   }
 
-  .footer-logo {
-    font-size: 2.5rem;
+  .footer-brand {
+    margin-top: 0;
+    padding-top: 0;
   }
 
-  .footer-brand {
-    margin-top: 1.2rem;
+  .footer-logo-image {
+    max-width: 150px;
+  }
+
+  .footer-logo-image:hover {
+    transform: scale(1.08);
   }
 
   .footer-bottom {

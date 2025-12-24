@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import emailIcon from '../assets/email.png';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -45,7 +46,13 @@ const Contact = () => {
               
               <div className="contact-details">
                 <div className="contact-item email-item" data-aos="fade-right" data-aos-duration="700" data-aos-delay="200" data-aos-easing="ease-out-cubic">
-                  <div className="contact-icon" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="250">📧</div>
+                  <div className="contact-icon email-icon-wrapper" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="250">
+                    <img 
+                      src={emailIcon} 
+                      alt="Email Icon" 
+                      className="email-icon-image"
+                    />
+                  </div>
                   <div>
                     <h4>Email</h4>
                     <a href="mailto:hr@glandbotanica.com" className="contact-link">psr@glandbotanica.com</a>
@@ -57,7 +64,7 @@ const Contact = () => {
                   <div className="contact-icon" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">📞</div>
                   <div>
                     <h4>Phone Numbers</h4>
-                    <p className="contact-text">5346729197</p>
+                    <p className="contact-text">+91 9346729197</p>
                   </div>
                 </div>
 

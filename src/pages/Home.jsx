@@ -50,8 +50,15 @@ const Home = () => {
               <div className="feature-icon">✨</div>
               <h3>Pure & Natural</h3>
               <p>
-                Free from artificial ingredients, unnecessary additives, and harmful chemicals. Just the power of the plant
-                — nothing else.
+                Free from artificial ingredients, unnecessary additives, and harmful chemicals. Just the power of the plant — nothing else.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon">🏆</div>
+              <h3>Quality and Purity</h3>
+              <p>
+                Free from artificial ingredients, unnecessary additives, and harmful chemicals.
               </p>
             </div>
           </div>

@@ -5,7 +5,7 @@ const OurCommitment = () => {
   const qualityTests = [
     'Purity – active ingredient concentration',
     'Safety – absence of heavy metals, pesticides, and microbial contamination',
-    'Consistency – ensuring every dose matches label claims'
+    'Consistency – ensuring every batch meets the specification limits'
   ];
 
   return (

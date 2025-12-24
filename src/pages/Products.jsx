@@ -9,6 +9,7 @@ import phyllanthusImg from '../assets/Phyllanthus.png';
 import tribulusImg from '../assets/Tribulus.png';
 import fenugreekImg from '../assets/Fenugreek.png';
 import androImg from '../assets/Andro.png';
+import curcuminImg from '../assets/Curcumin.png';
 
 const Products = () => {
 
@@ -17,7 +18,7 @@ const Products = () => {
       id: 1,
       name: 'Aloe Vera Spray-Dried Powder',
       productLine: '',
-      description: 'Dehydrated Aloe barbadensis miller extract (whole leaf, inner gel, or blends). A fine white to off-white powder rich in bioactive polysaccharides, vitamins, minerals, amino acids, enzymes, and natural sugars.',
+      description: 'Dehydrated Aloe Barbadensis Miller extract (whole leaf, inner gel, or blends). A fine white to off-white powder rich in bioactive polysaccharides, vitamins, minerals, amino acids, enzymes, and natural sugars.',
       procedure: 'Fresh leaves are washed, trimmed, and the gel extracted. The liquid undergoes filtration and clarification before spray drying into a fine powder.',
       benefits: ['Anti-inflammatory', 'Moisturizing', 'Biodegradable', 'Gelling agent'],
       image: aloeVeraImg
@@ -26,7 +27,7 @@ const Products = () => {
       id: 2,
       name: 'Bacopa Extract 50%',
       productLine: '',
-      description: 'A standardized extract of Bacopa monnieri containing 50% bacosides for consistent potency and effectiveness.',
+      description: 'A standardized extract of Bacopa Monnieri containing 50% Bacosides for consistent potency and effectiveness.',
       procedure: '',
       benefits: ['Cognitive enhancement', 'Neuroprotection', 'Stress and anxiety modulation', 'Antioxidant and anti-inflammatory support'],
       image: bacopaImg
@@ -84,6 +85,15 @@ const Products = () => {
       procedure: '',
       benefits: ['Immune support', 'Anti-inflammatory', 'Antimicrobial', 'Liver detox', 'Antioxidant defense'],
       image: androImg
+    },
+    {
+      id: 9,
+      name: 'Curcumin Extract 95%',
+      productLine: 'The Golden Healer',
+      description: 'A highly concentrated extract from turmeric rhizomes, standardized to 95% Curcuminoids. This powerful golden compound is renowned for its exceptional anti-inflammatory and antioxidant properties, supporting joint health, cognitive function, and overall wellness.',
+      procedure: '',
+      benefits: ['Powerful anti-inflammatory', 'Potent antioxidant', 'Supports joint mobility', 'Cognitive health support', 'Heart health promotion', 'Digestive wellness'],
+      image: curcuminImg
     }
   ];
 

@@ -7,7 +7,7 @@ const About = () => {
     { name: 'Bacopa', use: 'for cognitive and neuro health' },
     { name: 'Ashwagandha', use: 'for mood and vitality' },
     { name: 'Bakuchiol', use: 'for skincare and anti-aging' },
-    { name: 'Valerian', use: 'for relaxation and anxiety relief' },
+    { name: 'Curcumin', use: 'for anti-cancer, anti-inflammatory and anti-microbial' },
     { name: 'Fenugreek', use: 'for metabolic and diabetic support' }
   ];
 
@@ -23,6 +23,11 @@ const About = () => {
       title: 'Highest Purity & Consistency',
       description:
         'We are proud to be producing extracts with the highest quality and purity to meet rigorous global standards.'
+    },
+    {
+      title: 'Inspired by Nature, Perfected by Care',
+      description:
+        'Nature is our inspiration, care is our commitment. We promise to thoughtfully refine natural ingredients into products that balance purity, performance, and gentleness—bringing you the best of both worlds.'
     },
     {
       title: 'Built for Healthcare Needs',
@@ -45,7 +50,7 @@ const About = () => {
             <div className="intro-text-wrapper">
               <div className="intro-text-main">
                 <p className="intro-paragraph" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                  <span className="highlight-text">Gland Botanica</span> is a <span className="accent-text">Research driven</span> and <span className="accent-text">Quality focused</span> plant extracts manufacturer with a focus on improving human health by <span className="accent-text">Catering to the needs</span> of the health care industries. We are proud to be producing the <span className="highlight-text">highest Quality and purity</span> extracts.
+                  <span className="highlight-text">Gland Botanica</span> is a <span className="accent-text">research driven</span> and <span className="accent-text">Quality focused</span> plant extracts manufacturer with a focus on improving human health by <span className="accent-text">catering to the needs</span> of the health care industries. We are proud to be producing the <span className="highlight-text">highest Quality and purity</span> extracts.
             </p>
                 <p className="intro-paragraph" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                   <span className="highlight-text">Gland Botanica</span> is one of India's largest manufacturers of herbal and Ayurvedic nutraceutical extracts. Our state-of-the-art manufacturing facility is designed to meet USFDA standards, ensuring premium quality and safety.
@@ -116,7 +121,7 @@ const About = () => {
                 <h3 className="location-title">Our Location</h3>
                 </div>
                 <p className="location-text">
-                  We are located on an 8-acre campus in Genome Valley, Turkapally, the hub of India's biotech innovation.
+                  We are located on an 8-acre campus in Genome Valley, Turkapally, Hyderabad, India the hub of India's biotech innovation.
                 </p>
               </div>
             </div>

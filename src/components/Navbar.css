@@ -250,7 +250,7 @@
 .navbar-link {
   text-decoration: none;
   color: #2d5016;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
   padding: 0.6rem 1.5rem;
   border-radius: 25px;
@@ -273,20 +273,12 @@
 .navbar-link.active {
   background: transparent;
   color: #2d5016;
-  font-weight: 700;
+  font-weight: 800;
   position: relative;
 }
 
 .navbar-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0.3rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 2px;
+  display: none;
 }
 
 /* Hide mobile contact button on desktop */
@@ -332,6 +324,10 @@
   overflow: hidden;
 }
 
+.contact-pill-btn.active {
+  font-weight: 800;
+}
+
 .contact-pill-btn::before {
   content: '';
   position: absolute;
@@ -363,6 +359,7 @@
   background: rgba(144, 238, 144, 0.95);
   color: #2d5016;
   box-shadow: 0 4px 15px rgba(144, 238, 144, 0.4);
+  font-weight: 800;
 }
 
 /* ============================================
@@ -489,6 +486,7 @@
   .navbar-link {
     font-size: 0.82rem;
     padding: 0.4rem 0.9rem;
+    font-weight: 600;
   }
 
   .navbar-right {
@@ -617,6 +615,16 @@
     border-radius: 25px;
     white-space: normal;
     line-height: 1.4;
+    font-weight: 600;
+  }
+
+  .navbar-link.active {
+    font-weight: 800;
+  }
+
+  /* Remove white line under active links in mobile view */
+  .navbar-link.active::after {
+    display: none;
   }
 
   /* Contact button in mobile menu */
@@ -626,6 +634,10 @@
     color: #2d5016 !important;
     font-weight: 600 !important;
     margin-top: 0.5rem;
+  }
+
+  .contact-mobile-btn.active {
+    font-weight: 800 !important;
   }
 
   .contact-mobile-btn:hover {
@@ -694,6 +706,11 @@
     font-size: 0.95rem;
     white-space: normal;
     line-height: 1.4;
+    font-weight: 600;
+  }
+
+  .navbar-link.active {
+    font-weight: 800;
   }
 
   .contact-pill-btn {
